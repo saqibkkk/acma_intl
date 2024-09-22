@@ -25,7 +25,7 @@ class AppController extends GetxController {
 
   Future<void> checkLatestUpdate() async {
     const repoOwner = 'saqibkkk';
-    const repoName = 'one_solution';
+    const repoName = 'acma_intl';
     final response = await http.get(
       Uri.parse("https://api.github.com/repos/$repoOwner/$repoName/releases"),
       headers: {

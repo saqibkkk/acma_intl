@@ -66,25 +66,16 @@ class _CheckNtnPassState extends State<CheckNtnPass> {
 
   Future<UserCredential?> _signInWithGoogle() async {
     try {
-      setState(() {
-        isLoading = true;
-      });
       bool hasInternet = await internet.checkInternet();
       if (!hasInternet) {
         Utils.showSnackBar('Error', 'Not Internet Connection');
         ntnController.clear();
         passController.clear();
-        setState(() {
-          isLoading = false;
-        });
         return null;
       }
       await GoogleSignIn().signOut();
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
       if (googleUser == null) {
-        setState(() {
-          isLoading = false;
-        });
         return null;
       }
       final GoogleSignInAuthentication googleAuth =
@@ -93,9 +84,6 @@ class _CheckNtnPassState extends State<CheckNtnPass> {
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
-      setState(() {
-        isLoading = false;
-      });
       return await Api.auth.signInWithCredential(credential);
     } catch (e) {
       Utils.showSnackBar('Error', "An unknown error occurred");
