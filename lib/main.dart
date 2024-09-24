@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'API/realtime_crud.dart';
 import 'Controllers/app_controller.dart';
 import 'Controllers/internet.dart';
 import 'Controllers/theme_controller.dart';
@@ -18,7 +17,6 @@ void main() async {
   Get.put(AppController());
   Get.put(ThemeController());
   Get.put(InternetController());
-  Get.put(Api());
   await GetStorage.init();
   runApp(const MyApp());
 }

@@ -60,6 +60,9 @@ class UserProfileState extends State<UserProfile> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const SizedBox(
+                      height: 50,
+                    ),
                     Center(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
@@ -72,7 +75,7 @@ class UserProfileState extends State<UserProfile> {
                               const CircleAvatar(
                                   child: Icon(
                             CupertinoIcons.person,
-                            size: 100,
+                            size: 50,
                           )),
                         ),
                       ),
@@ -103,26 +106,6 @@ class UserProfileState extends State<UserProfile> {
                         textColor: theme.textDark.value,
                         bgColor: theme.cardBtn.value,
                         icon: FontAwesomeIcons.envelope),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Utils.customTextFormField(
-                        controller: TextEditingController(text: user.id),
-                        keyboardType: TextInputType.none,
-                        label: 'ID:',
-                        readOnly: true,
-                        obscureText: false,
-                        capital: TextCapitalization.none,
-                        textColor: theme.textDark.value,
-                        bgColor: theme.cardBtn.value,
-                        icon: FontAwesomeIcons.lock),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      '*This id will be used to generate any document.',
-                      style: TextStyle(color: Colors.red, fontSize: 12),
-                    )
                   ],
                 ),
               );

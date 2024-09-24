@@ -140,7 +140,7 @@ class _DownloadBillState extends State<DownloadBill> {
                         'Main G.T. Road, Markaz-e-Sanat Road, Street # 9, Gujranwala',
                         style: TextStyle(
                             color: Colors.black54,
-                            fontSize: 14,
+                            fontSize: 12,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
@@ -169,21 +169,21 @@ class _DownloadBillState extends State<DownloadBill> {
                           Expanded(
                             flex: 1,
                             child: Text(
-                              'Sr #:',
+                              'S/N',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black87,
-                                  fontSize: 14),
+                                  fontSize: 12),
                             ),
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 1,
                             child: Text(
                               'Name',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black87,
-                                  fontSize: 14),
+                                  fontSize: 12),
                             ),
                           ),
                           Expanded(
@@ -193,7 +193,7 @@ class _DownloadBillState extends State<DownloadBill> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black87,
-                                  fontSize: 14),
+                                  fontSize: 12),
                             ),
                           ),
                           Expanded(
@@ -203,7 +203,7 @@ class _DownloadBillState extends State<DownloadBill> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black87,
-                                  fontSize: 14),
+                                  fontSize: 12),
                             ),
                           ),
                           Expanded(
@@ -213,7 +213,7 @@ class _DownloadBillState extends State<DownloadBill> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black87,
-                                  fontSize: 14),
+                                  fontSize: 12),
                             ),
                           ),
                           Expanded(
@@ -223,7 +223,7 @@ class _DownloadBillState extends State<DownloadBill> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black87,
-                                  fontSize: 14),
+                                  fontSize: 12),
                             ),
                           ),
                         ],
@@ -247,15 +247,15 @@ class _DownloadBillState extends State<DownloadBill> {
                                   child: Text(
                                     widget.bill.serialNumber[index],
                                     style: const TextStyle(
-                                        color: Colors.black87, fontSize: 14),
+                                        color: Colors.black87, fontSize: 10),
                                   ),
                                 ),
                                 Expanded(
-                                  flex: 2,
+                                  flex: 1,
                                   child: Text(
                                     widget.bill.productNames[index],
                                     style: const TextStyle(
-                                        color: Colors.black87, fontSize: 14),
+                                        color: Colors.black87, fontSize: 10),
                                   ),
                                 ),
                                 Expanded(
@@ -263,7 +263,7 @@ class _DownloadBillState extends State<DownloadBill> {
                                   child: Text(
                                     widget.bill.productDescriptions[index],
                                     style: const TextStyle(
-                                        color: Colors.black87, fontSize: 14),
+                                        color: Colors.black87, fontSize: 10),
                                   ),
                                 ),
                                 Expanded(
@@ -271,7 +271,7 @@ class _DownloadBillState extends State<DownloadBill> {
                                   child: Text(
                                     widget.bill.productQuantities[index],
                                     style: const TextStyle(
-                                        color: Colors.black87, fontSize: 14),
+                                        color: Colors.black87, fontSize: 10),
                                   ),
                                 ),
                                 Expanded(
@@ -279,7 +279,7 @@ class _DownloadBillState extends State<DownloadBill> {
                                   child: Text(
                                     widget.bill.pricePerItems[index],
                                     style: const TextStyle(
-                                        color: Colors.black87, fontSize: 14),
+                                        color: Colors.black87, fontSize: 10),
                                   ),
                                 ),
                                 Expanded(
@@ -287,7 +287,7 @@ class _DownloadBillState extends State<DownloadBill> {
                                   child: Text(
                                     widget.bill.perItemTotals[index],
                                     style: const TextStyle(
-                                        color: Colors.black87, fontSize: 14),
+                                        color: Colors.black87, fontSize: 10),
                                   ),
                                 ),
                               ],
@@ -364,14 +364,14 @@ class _DownloadBillState extends State<DownloadBill> {
             child: Text(label,
                 style: const TextStyle(
                     color: Colors.black87,
-                    fontSize: 12,
+                    fontSize: 10,
                     fontWeight: FontWeight.bold)),
           ),
         ),
         Expanded(
           flex: 3,
           child: Text(': $value',
-              style: const TextStyle(color: Colors.black87, fontSize: 12)),
+              style: const TextStyle(color: Colors.black87, fontSize: 10)),
         ),
       ],
     );

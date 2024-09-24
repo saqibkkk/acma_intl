@@ -73,7 +73,6 @@ class _CheckNtnPassState extends State<CheckNtnPass> {
         passController.clear();
         return null;
       }
-      await GoogleSignIn().signOut();
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
       if (googleUser == null) {
         return null;
@@ -86,7 +85,8 @@ class _CheckNtnPassState extends State<CheckNtnPass> {
       );
       return await Api.auth.signInWithCredential(credential);
     } catch (e) {
-      Utils.showSnackBar('Error', "An unknown error occurred");
+      Utils.showSnackBar('Error', "An unknown error occurred  ${e.toString()}");
+      print('An unknown error occurred  ${e.toString()}');
       return null;
     }
   }
@@ -301,7 +301,8 @@ class _CheckNtnPassState extends State<CheckNtnPass> {
                                     : Utils.showProgressBar(context),
                                 const SizedBox(height: 20),
                                 isVerified == true
-                                    ? ElevatedButton(
+                                    ?
+                                ElevatedButton(
                                         style: ElevatedButton.styleFrom(
                                           foregroundColor: Colors.red,
                                           backgroundColor: Colors.white,

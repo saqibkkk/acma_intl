@@ -186,7 +186,7 @@ class DownloadSalarySlipState extends State<DownloadSalarySlip> {
                       'Main G.T. Road, Markaz-e-Sanat Road, Street # 9, Gujranwala',
                       style: TextStyle(
                           color: Colors.black54,
-                          fontSize: 14,
+                          fontSize: 12,
                           fontWeight: FontWeight.w400),
                     ),
                   ),

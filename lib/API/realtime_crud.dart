@@ -23,19 +23,6 @@ class Api extends GetxController {
   List<Map<String, dynamic>> companyDetailsList = [];
   static User get user => auth.currentUser!;
 
-  @override
-  void onInit() {
-    getEmployees();
-    getCompanyDetails();
-    getUser();
-    createUser();
-    userExists();
-    getCompanyDetails();
-    getClient();
-    getAllStock();
-    super.onInit();
-  }
-
   static Future<UserModel?> getUser() async {
     try {
       DatabaseReference userRef = dbRef.child('Users').child(user.uid);

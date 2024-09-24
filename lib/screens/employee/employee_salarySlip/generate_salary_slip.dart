@@ -67,14 +67,14 @@ class _GenerateSalarySlipState extends State<GenerateSalarySlip> {
             child: Text(label,
                 style: TextStyle(
                     color: widget.textColor,
-                    fontSize: 12,
+                    fontSize: 10,
                     fontWeight: FontWeight.bold)),
           ),
         ),
         Expanded(
           flex: 1,
           child: Text(': $value',
-              style: TextStyle(color: widget.textColor, fontSize: 12)),
+              style: TextStyle(color: widget.textColor, fontSize: 10)),
         ),
       ],
     );
@@ -86,7 +86,7 @@ class _GenerateSalarySlipState extends State<GenerateSalarySlip> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 5),
           child: Row(
             children: [
               Expanded(
@@ -110,8 +110,8 @@ class _GenerateSalarySlipState extends State<GenerateSalarySlip> {
                 child: Card(
                   color: Colors.black87,
                   child: Container(
-                    height: 120,
-                    width: 100,
+                    height: 100,
+                    width: 80,
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -121,13 +121,13 @@ class _GenerateSalarySlipState extends State<GenerateSalarySlip> {
                             alignment: Alignment.center,
                             child: Text(
                               'Rs. ${widget.netSalary}',
-                              style: TextStyle(color: widget.textLight, fontSize: 14),
+                              style: TextStyle(color: widget.textLight, fontSize: 12),
                             )),
                         const Divider(),
                         Text('Paid Days : ${widget.paidDays}',
-                            style: TextStyle(color: widget.textLight, fontSize: 12)),
+                            style: TextStyle(color: widget.textLight, fontSize: 10)),
                         Text('Absents   : ${widget.absent}',
-                            style: TextStyle(color: widget.textLight, fontSize: 12)),
+                            style: TextStyle(color: widget.textLight, fontSize: 10)),
                       ],
                     ),
                   ),
