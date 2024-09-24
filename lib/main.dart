@@ -14,10 +14,10 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await GetStorage.init();
   Get.put(AppController());
   Get.put(ThemeController());
   Get.put(InternetController());
-  await GetStorage.init();
   runApp(const MyApp());
 }
 
