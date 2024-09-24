@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         theme: themeController.theme.value == "0"
             ? ThemeData.light()
             : ThemeData.dark(),
-        title: 'Flutter Demo',
+        title: 'ACMA INTL',
         home: const SplashScreen()
         );
   }
